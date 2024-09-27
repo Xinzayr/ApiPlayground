@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ setPage }) => {
 
       <ul
         className={`${isOpen ? 'flex' : 'hidden'
-          } md:flex flex-col md:flex-row items-center md:space-x-8 space-y-2 md:space-y-0 absolute md:relative bg-transparent p-4 md:p-0 top-16 md:top-0 left-0 right-0 md:shadow-none z-10 md:z-0`}
+          } md:flex flex-col md:flex-row items-center md:space-x-8 space-y-2 md:space-y-0 absolute md:relative bg-white/80 dark:bg-black/80 rounded-md p-4 md:p-0 top-16 md:top-0 left-0 right-0 md:shadow-none z-10 md:z-0`}
       >
         <li>
           <Button
@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ setPage }) => {
             Proyecto 1
           </DropdownItem>
           <DropdownItem key="JsonProject" onClick={() => setPage('JsonProject')}>
-            Proyecto 2
+            JsonProject
           </DropdownItem>
           <DropdownItem key="PokeProject" onClick={() => setPage('PokeProject')}>
             PokeProject

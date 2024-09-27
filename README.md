@@ -17,14 +17,19 @@ Bienvenido al proyecto API Playground. Este proyecto está diseñado para propor
 ## Instalación
 
 1. Clona el repositorio:
+
     ```bash
     git clone https://github.com/tu-usuario/api-playground.git
     ```
+
 2. Navega al directorio del proyecto:
+
     ```bash
     cd api-playground
     ```
+
 3. Instala las dependencias:
+
     ```bash
     npm install
     ```
@@ -32,6 +37,7 @@ Bienvenido al proyecto API Playground. Este proyecto está diseñado para propor
 ## Uso
 
 Para iniciar el servidor de desarrollo, ejecuta:
+
 ```bash
 npm start
 ```
@@ -40,17 +46,17 @@ Luego, abre tu navegador y navega a `http://localhost:3000` para comenzar a usar
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos para contribuir:
+5. Abre un Pull Request.
 
-1. Haz un fork del repositorio.
+## Licencia
 2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
 3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
 4. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
 
-## Licencia
+Para cualquier pregunta o sugerencia, por favor abre un issue en el repositorio o contacta al mantenedor del proyecto.
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+¡Gracias por usar API Playground!ia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ## Contacto
 

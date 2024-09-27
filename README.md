@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# API Playground
 
-## Getting Started
+Bienvenido al proyecto API Playground. Este proyecto está diseñado para proporcionar un entorno interactivo para probar y experimentar con diferentes APIs.
 
-First, run the development server:
+## Características
 
+- **Interfaz amigable**: Una interfaz de usuario intuitiva para facilitar la interacción con las APIs.
+- **Soporte para múltiples APIs**: Prueba y compara diferentes APIs en un solo lugar.
+- **Historial de solicitudes**: Guarda y revisa tus solicitudes anteriores.
+- **Autenticación**: Soporte para diferentes métodos de autenticación como API keys, OAuth, etc.
+
+## Requisitos
+
+- Node.js v14 o superior
+- npm v6 o superior
+
+## Instalación
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/api-playground.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd api-playground
+    ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+
+## Uso
+
+Para iniciar el servidor de desarrollo, ejecuta:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego, abre tu navegador y navega a `http://localhost:3000` para comenzar a usar la aplicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contribuciones
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos para contribuir:
 
-## Learn More
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
+4. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## Licencia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contacto
 
-## Deploy on Vercel
+Para cualquier pregunta o sugerencia, por favor abre un issue en el repositorio o contacta al mantenedor del proyecto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+¡Gracias por usar API Playground!

@@ -19,7 +19,7 @@ const geistMono = localFont({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Personal Profile",
+  title: "Api Playground",
   description: "Make by Xinzayr in NextJS",
 };
 

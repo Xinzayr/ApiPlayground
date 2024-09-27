@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ setPage }) => {
           href="/"
           className="text-xl font-bold text-black dark:text-white"
         >
-          Profile
+          ApiPlayground
         </a>
       </div>
 

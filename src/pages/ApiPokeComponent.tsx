@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios, { AxiosResponse } from 'axios';
 
-const API_URL = 'https://pokeapi.co/api/v2/pokemon';
-
 interface PokemonData {
     name: string;
     sprites: {
@@ -33,16 +31,6 @@ const generationRanges = {
     9: { start: 899, end: 1010 },
 };
 
-const getPokemon = async (pokemonNameOrId: string | number): Promise<PokemonData | null> => {
-    try {
-        const response: AxiosResponse<PokemonData> = await axios.get(`${API_URL}/${pokemonNameOrId}`);
-        return response.data;
-    } catch (error) {
-        console.error('Error fetching Pokémon data:', error);
-        return null;
-    }
-};
-
 const getGeneration = (pokemonId: number): number | null => {
     for (const [generation, range] of Object.entries(generationRanges)) {
         if (pokemonId >= range.start && pokemonId <= range.end) {
@@ -64,14 +52,21 @@ const ApiPokeComponent: React.FC<ApiPokeComponentProps> = ({ pokemonId, onPokemo
 
     useEffect(() => {
         const fetchPokemon = async () => {
-            const data = await getPokemon(pokemonId);
-            const gen = getGeneration(pokemonId);
-            if (data && gen !== null) {
-                setPokemon(data);
-                setGeneration(gen);
-                setError(null);
-            } else {
-                setError('Pokémon not found. Please try again.');
+            try {
+                const response: AxiosResponse<PokemonData> = await axios.get(`/api/InternalApiPoke?id=${pokemonId}`);
+                const data = response.data;
+                const gen = getGeneration(pokemonId);
+                if (data && gen !== null) {
+                    setPokemon(data);
+                    setGeneration(gen);
+                    setError(null);
+                } else {
+                    setError('Pokémon not found. Please try again.');
+                    setPokemon(null);
+                    setGeneration(null);
+                }
+            } catch {
+                setError('Error fetching Pokémon data');
                 setPokemon(null);
                 setGeneration(null);
             }

@@ -98,8 +98,8 @@ const Header: React.FC<HeaderProps> = ({ setPage }) => {
           </Button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Proyectos" variant="light" className="w-full p-3 bg-white dark:bg-black text-black dark:text-white rounded-md">
-          <DropdownItem key="proyecto1" onClick={() => setPage('Proyecto1')}>
-            Proyecto 1
+          <DropdownItem key="proyecto1" onClick={() => setPage('CrudProject')}>
+            CrudProject
           </DropdownItem>
           <DropdownItem key="JsonProject" onClick={() => setPage('JsonProject')}>
             JsonProject

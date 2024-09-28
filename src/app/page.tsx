@@ -7,8 +7,9 @@ import NotFound from '@/components/NotFound';
 import HomePage from '@/pages/Home';
 import AboutPage from '@/pages/About';
 import Contact from '@/pages/Contact';
-import PokeApi from '@/pages/api/ApiPokeComponent';
-import JsonApi from '@/pages/api/ApiJsonComponent';
+import CrudApi from '@/pages/ApiCrudComponent';
+import PokeApi from '@/pages/ApiPokeComponent';
+import JsonApi from '@/pages/ApiJsonComponent';
 
 const App: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -30,6 +31,9 @@ const App: React.FC = () => {
     switch (pagSelect) {
       case 'HomePage':
         pageComponent = <HomePage />;
+        break;
+      case 'CrudProject':
+        pageComponent = <CrudApi />;
         break;
       case 'JsonProject':
         pageComponent = <JsonApi />;

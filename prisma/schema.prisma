@@ -1,0 +1,16 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Persona {
+  id            Int      @id @default(autoincrement())
+  nombre        String
+  apellido      String
+  direccion     String
+  observaciones String?
+}

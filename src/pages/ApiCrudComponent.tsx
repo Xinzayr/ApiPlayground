@@ -10,22 +10,30 @@ interface Persona {
 }
 
 const ApiCrudComponent: React.FC = () => {
-    const [personas, setPersonas] = useState<Persona[]>(() => {
-        const storedPersonas = localStorage.getItem('personas');
-        return storedPersonas ? JSON.parse(storedPersonas) : [];
-    });
+    const [personas, setPersonas] = useState<Persona[]>([]);
     const [formData, setFormData] = useState<Persona>({ nombre: '', apellido: '', direccion: '', observaciones: '' });
     const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const storedPersonas = localStorage.getItem('personas');
+            if (storedPersonas) {
+                setPersonas(JSON.parse(storedPersonas));
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('personas', JSON.stringify(personas));
+        }
+    }, [personas]);
 
     useEffect(() => {
         if (!personas.length) {
             fetchPersonas();
         }
     }, [personas.length]);
-
-    useEffect(() => {
-        localStorage.setItem('personas', JSON.stringify(personas));
-    }, [personas]);
 
     const fetchPersonas = async () => {
         try {
